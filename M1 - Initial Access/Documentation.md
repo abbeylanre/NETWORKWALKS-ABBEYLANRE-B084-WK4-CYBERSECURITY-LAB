@@ -33,14 +33,14 @@ Before achieving portal access, single-request observations on `/patient/login.p
 
 - **Verbose SQL Error Responses (`2451`–`2471` bytes, `HTTP/2 200 OK`):**
   - Certain single-quote (`'`) inputs triggered `Warning: mysqli_query(): You have an error in your SQL syntax...` (such as `near '' OR '1'='1'' at line 1` at `2471` bytes), revealing single-quote string framing around `username` and unparameterized query construction.
-  - *Screenshot evidence:* ![Incorrect Password Output](./Screenshots/syntax-error.png).
+  - *Screenshot evidence:* ![Syntax Error Output](./Screenshots/syntax-error.png).
 - **Non-Error / Non-Matching Variants:** Inputs that executed without a syntax error returned `2281`-byte alerts until a valid session transition occurred.
   - *Screenshot evidence:* ![Unfound User Output](./Screenshots/username-not-found.png).
 
 ## 4. Access Achievement & Milestone 2 Handoff
 - **Access Proof:** Obtained an authenticated session (`PHPSESSID`) and accessed `/patient/portal.php` (`200 OK`) showing `.report-row` entries.
   - *Screenshot evidence:* ![Patient Report PDF Output](./Screenshots/patient-report.png).
-   ![Incorrect Password Output](./Screenshots/encrypted-file.png).
+   ![Encrypted File Output](./Screenshots/encrypted-file.png).
 - **Milestone 2 Handoff:** Retrieved the target report files locally outside the repository for separate **Milestone 2** encryption/hash analysis (individual file details, SHA keys, and file screenshots are tracked under M2).
 
 ## 5. Remediation Recommendations
