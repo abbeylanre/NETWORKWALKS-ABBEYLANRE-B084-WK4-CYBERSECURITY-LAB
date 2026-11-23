@@ -46,9 +46,8 @@ Before achieving portal access, single-request observations on `/patient/login.p
 - **Access Proof:** Obtained an authenticated session (`PHPSESSID`) and accessed `/patient/portal.php` (`200 OK`) showing `.report-row` entries.
   - *Screenshot evidence:* `Screenshots/portal-access-report.png`
 - **Retrieved Lab Reports:** Downloaded all 3 target report files locally for **Milestone 2** encryption/hash analysis:
-  - *File 1:* `<filename_1>` | `SHA-256: <sha256_1>` | `Retrieved: <timestamp_utc>` | *Screenshot:* `screenshots/13-file1-download-hash.png`
-  - *File 2:* `<filename_2>` | `SHA-256: <sha256_2>` | `Retrieved: <timestamp_utc>` | *Screenshot:* `screenshots/14-file2-download-hash.png`
-  - *File 3:* `<filename_3>` | `SHA-256: <sha256_3>` | `Retrieved: <timestamp_utc>` | *Screenshot:* `screenshots/15-file3-download-hash.png`
+  - *File 1:* `patient_report_1` *File 2:* `patient_report_2 *File 3:* `patient_report_3.
+  - `*Screenshot:* `Screenshots/incorrect-password.png`  `Screenshots/incorrect-password.png`
 - *(Note: Redact or omit raw patient personal identifiable information in shared or public repository notes per lab/privacy rules.)*
 
 ## 5. Remediation Recommendations
