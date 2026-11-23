@@ -14,7 +14,7 @@ Focused reconnaissance on the tools that returned actionable findings for `medir
    - *Screenshot evidence:* ![whois Command Output](./Screenshots/whois-medirozahospital.png)
 2. **`whatweb` (Server & Redirect Behavior):**
    - *Findings:* Resolved to `199.188.201.16` (`US`), `LiteSpeed` (`HTTPServer[LiteSpeed]`, `PoweredBy[LiteSpeed]`, `x-turbo-charged-by`, `HTML5`); `http://medirozahospital.com` returned `301` to `https://medirozahospital.com/`, which returned `403 Forbidden` to `whatweb`.
-   - *Screenshot evidence:*    ![whoatweb Command Output](./Screenshots/whatweb-medirozahospital.png)
+   - *Screenshot evidence:*    ![whatweb Command Output](./Screenshots/whatweb-medirozahospital.png)
 3. **`curl` (HTTP Headers, Sessions & Endpoints):**
    - *Findings:* Confirmed `PHP/8.2.36` over `LiteSpeed` (`Mediroza CMS 1.4.2`), inspected `PHPSESSID` and `Cache-Control` headers, mapped `/patient/login.php` and `/patient/portal.php` (`.report-row`), and verified unauthenticated portal redirects back to `/patient/login.php`.
    - *Screenshot evidence:*  ![curl Command Output](./Screenshots/curl-medirozahospital.png)
@@ -29,7 +29,7 @@ Before achieving portal access, single-request observations on `/patient/login.p
   - Unfound user test cases returned `<div class="alert">Username not found</div>`.
   - Existing user test cases returned `<div class="alert">Incorrect password</div>`, indicating separate user lookup and credential verification paths.
   - *Screenshot evidence:* ![Incorrect Password Output](./Screenshots/incorrect-password.png).
-  - ![Incorrect Password Output](./Screenshots/incorrect-password2.png)
+  - ![Baseline Alert Response](./Screenshots/incorrect-password2.png)
 
 - **Verbose SQL Error Responses (`2451`–`2471` bytes, `HTTP/2 200 OK`):**
   - Certain single-quote (`'`) inputs triggered `Warning: mysqli_query(): You have an error in your SQL syntax...` (such as `near '' OR '1'='1'' at line 1` at `2471` bytes), revealing single-quote string framing around `username` and unparameterized query construction.
