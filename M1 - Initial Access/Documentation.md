@@ -4,8 +4,7 @@
 - **Target:** `https://medirozahospital.com`
 - **Reference:** `WK4 Mediroza v1.pdf` (Authorized lab engagement; testing restricted strictly to `medirozahospital.com` with single requests, no automated scanners/brute-forcing loops, and no denial-of-service traffic).
 - **Milestone 1 Objective:** Perform reconnaissance using Kali Linux tools, analyze authentication and input-handling behavior, gain unauthorized access to the patient portal, and retrieve the 3 confidential patient PDF lab reports for Milestone 2.
-- **Screenshot Evidence:** ![Scope and Authorization](./Screenshots/scope-and-authorization.png)
-
+- **Screenshot Evidence:** ![Scope and Authorization](./Screenshots/scope-and-authorization.png).
 ## 2. Reconnaissance & Footprinting (Relevant Tools Only)
 Focused reconnaissance on the tools that returned actionable findings for `medirozahospital.com` (omitting tools that yielded no extra signal):
 
