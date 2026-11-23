@@ -4,14 +4,14 @@
 - **Target:** `https://medirozahospital.com`
 - **Reference:** `WK4 Mediroza v1.pdf` (Authorized lab engagement; testing restricted strictly to `medirozahospital.com` with single requests, no automated scanners/brute-forcing loops, and no denial-of-service traffic).
 - **Milestone 1 Objective:** Perform reconnaissance using Kali Linux tools, analyze authentication and input-handling behavior, gain unauthorized access to the patient portal, and retrieve the 3 confidential patient PDF lab reports for Milestone 2.
-- **Screenshot Evidence:** `Screenshots/scope-and-authorization.png`
+- **Screenshot Evidence:** ![Scope and Authorization](./Screenshots/scope-and-auth.png`)
 
 ## 2. Reconnaissance & Footprinting (Relevant Tools Only)
 Focused reconnaissance on the tools that returned actionable findings for `medirozahospital.com` (omitting tools that yielded no extra signal):
 
 1. **`whois` (Domain Registration & Ownership):**
    - *Findings:* Registered via NameCheap, Inc. (IANA `1068`, ID `3132326963_DOMAIN_COM-VRSN`); created `2026-08-14`, updated `2026-08-14`, expires `2027-08-14`; name servers `DNS1.NAMECHEAPHOSTING.COM` and `DNS2.NAMECHEAPHOSTING.COM`; status `clientTransferProhibited`.
-   - *Screenshot evidence:* `Screenshots/whois-medirozahospital.png`
+   - *Screenshot evidence:* ![whois Command Output](./Screenshots/whois-medirozahospital.png)
 2. **`whatweb` (Server & Redirect Behavior):**
    - *Findings:* Resolved to `199.188.201.16` (`US`), `LiteSpeed` (`HTTPServer[LiteSpeed]`, `PoweredBy[LiteSpeed]`, `x-turbo-charged-by`, `HTML5`); `http://medirozahospital.com` returned `301` to `https://medirozahospital.com/`, which returned `403 Forbidden` to `whatweb`.
    - *Screenshot evidence:* `Screenshots/whatweb-medirozahospitaL.png`
