@@ -45,7 +45,7 @@
   - Three `staff` records carry `date_joined` values (`2019-09-02`, `2019-11-05`, and `2020-02-10`) after the SQL header timestamp (`2019-08-27 02:14:03`), indicating post-header or appended sample/test entries in the dump.
 - **Proof & Evidence:** Documented in `M3-Critical-Data-Exposure/Documentation.md`
   ![Old File](./Screenshots/old.png).
-  ![Backup Discovery](./Screenshots/backup-discovery.png.png).
+  ![Backup Discovery](./Screenshots/backup-discovery.png).
   ![Staff Salaries](./Screenshots/staff-salaries.png).
   ![Shareholders](./Screenshots/shareholders.png). and
   ![M3 Summary](./Screenshots/m3-summary.png).
