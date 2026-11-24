@@ -8,6 +8,8 @@
   - **Milestone 3 (Critical Data Exposure):** Inspecting `robots.txt` (`/patient/`, `/staff/`, `/old/`, and `sitemap.xml`) and enumerating `/old/` revealed an open directory listing (`Index of /old/`) containing `mediroza_db_backup_2019.sql` (a Mediroza CMS 1.4.2 dump for `mediroza_hr`). Analysis of the backup uncovered **30 employee records** with a combined monthly payroll of **R2,027,000** (**R24,324,000** annualized) and **10 shareholders** holding **1,000,000 shares** (**88.0%** Ordinary, **12.0%** Preferential).
 - **Overall Risk & Business Impact:** The combined exposure of confidential patient lab reports, weak document encryption, and an unencrypted full database backup via an open directory index presents a **Critical** risk to patient privacy, employee and shareholder confidentiality, regulatory compliance, and organizational trust.
 
+![Engagement Overview](./Screenshots/engagement-overview.png)
+
 ## 02 Scope and Methodology
 - **Target & Authorization:** Assessment targeted `https://medirozahospital.com` (Mediroza General Hospital) with written authorization for controlled testing within the target domain.
 - **Rules of Engagement:** Testing was restricted strictly to the authorized target domain and controlled lab activities, with no denial-of-service, social engineering, or out-of-scope testing.
@@ -22,7 +24,7 @@
 
 ### Finding 1 — Exposed Patient Lab Reports & Initial Access (Milestone 1)
 - **Summary:** Web reconnaissance and entry-point analysis enabled access to restricted/exposed areas and retrieval of **3 confidential patient PDF lab reports**.
-- **Proof & Evidence:** Documented in `M1 - Initial Access/Documentation.md` (`./Screenshots/m1-initial-access.png`).
+- **Proof & Evidence:** Documented in `M1 - Initial Access/Documentation.md` (./Screenshots/initial-access.png).
 
 ### Finding 2 — Weak PDF Encryption & Credential Recovery (Milestone 2)
 - **Summary:** All **3 retrieved patient PDF lab reports** were protected with recoverable encryption/passwords, allowing full decryption and access to confidential lab report contents when tailored recovery approaches were applied per file.
@@ -60,3 +62,5 @@
 - **Medium-Term Security Improvements (1–4 Weeks):**
   - Enforce strong encryption and robust password/key management for sensitive documents and lab reports, avoiding weak or guessable passwords.
   - Audit `robots.txt` so sensitive directories are protected by server-side access controls rather than relying on obscurity, and conduct a follow-up verification scan to confirm remediation.
+
+![Risk Rating and Remediation Roadmap](./Screenshots/risk-matrix.png)
