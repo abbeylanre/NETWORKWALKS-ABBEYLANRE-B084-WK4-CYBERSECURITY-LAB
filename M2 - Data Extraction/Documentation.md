@@ -8,24 +8,24 @@
 - **Screenshot Evidence:** ![The Patient Reports](./Screenshots/patient-report.png)
 
 ## 2. File 1 — Encryption Analysis & Recovery
-- **File Reference:** Patient Report 1 / PDF 1 (`<local_file_1_label>`, stored locally; excluded from repository)
+- **File Reference:** Patient Report 1 (stored locally; excluded from repository)
 - **Hash Extraction (`Online Hash Calculator` / `Networkwalks Hash Calculator`):** Extracted the hash value using the online hash calculator and Networkwalks hash calculator (`<sanitized hash format or observation>`).
 - **Password Recovery (`Networkwalks Password Crack`):** Submitted the extracted hash value to Networkwalks Password Crack and recovered the password (`123456`) within the built-in wordlist.
-- **Recovery Outcome:** **Cracked** — confirmed local access to PDF 1 (`<sanitized summary of recovered contents without exposing raw PII or sensitive credentials>`).
+- **Recovery Outcome:** **Cracked** — confirmed local access to  Patient Report 1.
 - **Screenshot Evidence:** ![File1 Hash Value](./Screenshots/file1-hash.png) and ![Evidence of File1 Access](./Screenshots/file1-access.png)
 
 ## 3. File 2 — Encryption Analysis & Recovery
-- **File Reference:** Patient Report 2 / PDF 2 (`<local_file_2_label>`, stored locally; excluded from repository)
+- **File Reference:** Patient Report 2 (stored locally; excluded from repository)
 - **Hash Extraction (`Online Hash Calculator` / `Networkwalks Hash Calculator`):** Extracted the hash value using the online hash calculator and Networkwalks hash calculator (`<sanitized hash format or observation>`).
 - **Password Recovery (`Networkwalks Password Crack`):** Submitted the extracted hash value to Networkwalks Password Crack and recovered the password (`password`) within the built-in wordlist.
-- **Recovery Outcome:** **Cracked** — confirmed local access to PDF 2 (`<sanitized summary of recovered contents without exposing raw PII or sensitive credentials>`).
+- **Recovery Outcome:** **Cracked** — confirmed local access to Patient Report 2.
 - **Screenshot Evidence:** ![File2 Password Cracked](./Screenshots/file2-password.png) and ![Evidence of File2 Access](./Screenshots/file2-access.png)
 
 ## 4. File 3 — Encryption Analysis & Recovery
-- **File Reference:** Patient Report 3 / PDF 3 (`<local_file_3_label>`, stored locally; excluded from repository)
+- **File Reference:** Patient Report 3 (stored locally; excluded from repository)
 - **Hash Extraction (`Online Hash Calculator` / `Networkwalks Hash Calculator`):** Extracted the hash value using the online hash calculator and Networkwalks hash calculator (`<sanitized hash format or observation>`).
 - **Initial Attempt & Adaptation (`Networkwalks Password Crack` → Kali `hashcat` + `rockyou.txt`):** Initial submission to Networkwalks Password Crack returned *"Access denied / Not cracked with this wordlist"* because the candidate (`!@#$%^&`) was outside the built-in 100-password list. Adapted by running `hashcat` on Kali Linux against the extracted hash using the larger `rockyou.txt` wordlist to recover the password (`!@#$%^&`).
-- **Recovery Outcome:** **Cracked (via Kali `hashcat` + `rockyou.txt`)** — recovered the password after expanding beyond the 100-password list, confirming local access to PDF 3 (`<sanitized summary of recovered contents without exposing raw PII or sensitive credentials>`).
+- **Recovery Outcome:** **Cracked (via Kali `hashcat` + `rockyou.txt`)** — recovered the password after expanding beyond the 100-password list, confirming local access to Patient Report 3.
 - **Screenshot Evidence:** ![File3 Password Cracked](./Screenshots/file3-password.png) and ![Evidence of File3 Access](./Screenshots/file3-access.png)
 ## 5. Cross-File Observations & Handoff to Milestone 3
 - **Password Complexity & Cracking Behavior Across Files 1–3:**
