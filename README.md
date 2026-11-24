@@ -27,7 +27,7 @@ The project focuses on conducting an authorized security assessment of a designa
 | **M1 – Initial Access** | Reconnaissance & Entry | Domain/DNS reconnaissance, technology profiling, and entry-point analysis. | [View M1 Documentation](./M1%20-%20Initial%20Access) |
 | **M2 – Data Extraction** | Traffic & Data Analysis | Packet captures, data extraction assessment, and verification artifacts. | [View M2 Documentation](./M2%20-%20Data%20Extraction) |
 | **M3 – Attack** | Threat Simulation & Defense | Controlled attack simulation logs, security control testing, and mitigation steps. | [View M3 Documentation](./M3%20-%20Attack) |
-| **M4 – Penetration Testing Report** | Reporting & Remediation | Final executive summary, technical findings, and security recommendations. | [View M4 Documentation](./M4%20-%20Penetration%20Testing%20Report) |
+| **M4 – Penetration Testing Report** | Reporting & Remediation | Final executive summary, technical findings, and security recommendations. | [View M4 Documentation](./M4%20-%20Penetration%20Test%20Report) |
 
 *(Note: Make sure your `M4 - Penetration Testing Report` folder matches the exact folder name in your repository so the link works.)*
 
